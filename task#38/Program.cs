@@ -27,10 +27,10 @@ int n = int.Parse(Console.ReadLine()!);
 double[] array = new double[n];
 InputArray(array);
 Console.WriteLine($"Начальный массив: [{string.Join(": ", array)}]");
-// Diff(araay);
-Console.WriteLine($"Результат: {string.Join(Diff(imax) - (imin) = (imax - imin))}");
 
-// Console.WriteLine($"Конечный массив: {string.Join(", ", proizvedenie(array, result))}");
+Console.WriteLine($"Результат: {string.Join(diff(array, imax, imin))}");
+
+
 
 
 
