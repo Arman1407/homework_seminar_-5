@@ -11,11 +11,28 @@ for (int i = 0; i < array.Length; i++)
 array[i] = new Random().Next(-100, 101); // [-9; 9]
 }
 
-int[] Summa(int[] array, int[] result)
+// string SearchNumber(int number)
+// {
+// foreach (int element in array)
+// {
+// if (element == number)
+// return "yes";
+// }
+// return "no";
+// }
+
+
+void summa(int[] array)
 {
-for (int i = 0; i < result.Length; i++)
-result[i] = result[i] % 2;
-return result;
+int Positivеsum = 0;
+int count = 0;
+foreach (int element in array)
+{
+if (element != element % 2)
+count ++;
+Positivеsum += count;
+}
+Console.WriteLine($"Сумма не четных элементов массива: {Positivеsum}"); 
 }
 
 Console.Clear();
@@ -24,6 +41,6 @@ int n = int.Parse(Console.ReadLine()!);
 int[] array = new int[n];
 InputArray(array);
 Console.WriteLine($"[{string.Join(", ", array)}]");
+summa(array);
 
-Console.WriteLine($"Сумма элементов массива, стоящих на нечетных позициях = {(", ", Summa(array, result))}");
 
