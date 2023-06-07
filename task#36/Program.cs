@@ -8,19 +8,8 @@
 void InputArray(int[] array)
 {
 for (int i = 0; i < array.Length; i++)
-array[i] = new Random().Next(-100, 101); // [-9; 9]
+array[i] = new Random().Next(-100, 101); 
 }
-
-// string SearchNumber(int number)
-// {
-// foreach (int element in array)
-// {
-// if (element == number)
-// return "yes";
-// }
-// return "no";
-// }
-
 
 void summa(int[] array)
 {
