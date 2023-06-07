@@ -63,7 +63,7 @@ InputArray(array);
 Console.WriteLine($"{string.Join(", ", array)}");
 newSearch(array);
 Search(array);
-// if (noteven > even)
+// if (newSearch !> Search)
 // Console.WriteLine($"No");
 // else 
 // Console.WriteLine($"Yes");
