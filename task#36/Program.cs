@@ -11,17 +11,11 @@ for (int i = 0; i < array.Length; i++)
 array[i] = new Random().Next(-100, 101); // [-9; 9]
 }
 
-void Summa(int[] array)
+int[] Summa(int[] array, int[] result)
 {
-int summa = 0;                       // int sumPositivе = 0, allSum = 0;
-foreach (int element in array)
-{
-if (element % 2 == 1)
-summa += element + 2;
-                                    //allSum += element;
-}
-Console.WriteLine($"Сумма элементов массива, стоящих на нечетных позициях = {summa}");
-// Console.WriteLine($"Сумма отрицательных чисел равна: {allSum - sumPositivе}");
+for (int i = 0; i < result.Length; i++)
+result[i] = result[i] % 2;
+return result;
 }
 
 Console.Clear();
@@ -30,6 +24,6 @@ int n = int.Parse(Console.ReadLine()!);
 int[] array = new int[n];
 InputArray(array);
 Console.WriteLine($"[{string.Join(", ", array)}]");
-Summa(array);
 
+Console.WriteLine($"Сумма элементов массива, стоящих на нечетных позициях = {(", ", Summa(array, result))}");
 
