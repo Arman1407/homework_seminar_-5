@@ -6,30 +6,43 @@
 
 void InputArray(double[] array)
 {
-    int end = 100, begin = 0;
-    for (int i = 0; i < array.Length; i++)
-    array[i] = Math.Round(new Random().NextDouble() * (end - begin) + begin, 2);
+int end = 100, begin = 0;
+for (int i = 0; i < array.Length; i++)
+array[i] = Math.Round(new Random().NextDouble() * (end - begin) + begin, 2);
 }
 
-//void Diff(int[] array);
-int[] diff(int[] result, int[] imax, int[] imin)
+void diff(double[] array)
 {
-    // int imax = 0;
-    // int imin = 0;
+    double max = array[0];
+    double min = array[0];
+    double difference = array[0];
 
-    for (int i = 0; i < array.Length; i++);
-    result[i] = imax[i] - imin[i];
-    return result;
+    for (int i = 0; i < array.Length; i++)
+    
+    if(array[i] > max)
+    {
+        max = array[i];
+    }
+    else if(array[i] < min)
+    {
+        min = array[i];
+    }
+    
+    difference = max - min;
+
+    Console.WriteLine("максимальный элемент массива: " + max);
+    Console.WriteLine("минимальный элемент массива: " + min);
+    Console.WriteLine("разница максимального и минимального элементов массива: " + difference);
 }
 
+Console.Clear();
 Console.Write("Введите кол-во элементов массива: ");
 int n = int.Parse(Console.ReadLine()!);
 double[] array = new double[n];
 InputArray(array);
-Console.WriteLine($"Начальный массив: [{string.Join(": ", array)}]");
-
-Console.WriteLine($"Результат: {string.Join(diff(array, imax, imin))}");
-
+Console.WriteLine($"[{string.Join(", ", array)}]");
+diff(array);
+//Console.WriteLine($"{string.Join({max} - {min} = {difference})}");
 
 
 
