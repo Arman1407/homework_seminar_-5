@@ -13,15 +13,10 @@ array[i] = new Random().Next(-100, 101);
 
 void summa(int[] array)
 {
-int Positivеsum = 0;
-int count = 0;
-foreach (int element in array)
-{
-if (element != element % 2)
-count ++;
-Positivеsum += count;
-}
-Console.WriteLine($"Сумма не четных элементов массива: {Positivеsum}"); 
+int oddsumma = 0;
+for (int i = 1; i < array.Length; i+=2)
+oddsumma += array[i];
+Console.WriteLine($"Сумма не четных элементов массива: {oddsumma}"); 
 }
 
 Console.Clear();
